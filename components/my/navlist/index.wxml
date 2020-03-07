@@ -1,0 +1,16 @@
+<view class="navlist">
+	<block wx:for="{{navlistdata['navArr']}}" wx:key="index">
+		<view class="nav-item {{navlistdata['navdefault']==item['id'] ? 'stringcolor':''}}" 
+			  data-id="{{item['id']}}"
+			  style="width:{{100/navlistdata['navArr'].length}}%;"
+			  bindtap="navtabfn"
+			  >{{item['name']}} 
+		</view>
+	</block>
+</view>
+
+<view class="section">
+	<contents contentdata="{{contentdata}}"/>
+</view>
+
+
